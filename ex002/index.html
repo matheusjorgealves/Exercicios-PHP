@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Madeira e Cia Ltda.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Promoção de Aniversário</h1>
+
+    <form action="descontos.php" method="POST">
+        <!-- Formulário com envio POST -->
+
+        <label for="txtNome">Nome do Cliente:</label> 
+        <!-- o for serve para conectar o label com o input -->
+        <input type="text" name="txtNome" id="txtNome" required>
+
+        <label for="txtValorCompra">Valor da Compra:</label>
+        <input type="number" min="0" step="0.01" name="txtValorCompra" id="txtValorCompra" required>
+
+        <label for="cmbPag">Forma de Pagamento:</label>
+        <select name="cmbPag" id="cmbPag" required>
+            <option value="">Selecione</option>
+            <option value="cartaoCredito">Cartão de Crédito</option>
+            <option value="boleto">Boleto</option>
+            <option value="deposito">Depósito</option>
+        </select>
+        <!-- o select é tipo um container de opções -->
+
+        <button type="submit">Calcular Desconto</button>
+
+    </form>
+</div>
+
+</body>
+</html>

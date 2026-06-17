@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(240, 239, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.8em;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: rgb(75, 173, 78);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(75, 160, 73);
+}

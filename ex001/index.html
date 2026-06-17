@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <h2>Formulário de Cadastro</h2>
+
+    <!-- Formulário usando POST = não visível na URL -->
+    <form action="processador.php" method="post"> 
+        <!-- Action = chamando o código PHP-->
+
+        <label>Nome completo:</label><br>
+        <input type="text" name="nome" required><br><br>
+
+        <label>Idade:</label><br>
+        <input type="number" name="idade" required><br><br>
+
+        <label>Profissão:</label><br>
+        <input type="text" name="profissao" required><br><br>
+
+        <label>Salário pretendido:</label><br>
+        <input type="text" name="salario" required><br><br>
+
+        <label>Experiência anterior:</label><br>
+        <textarea name="experiencia" rows="5" cols="40" required></textarea><br><br>
+
+        <button type="submit">Enviar com POST</button>
+
+    </form>
+
+    <hr>
+
+    <!-- Formulário alternativo usando GET -->
+    <form action="processador.php" method="get">
+
+        <input type="hidden" name="nome" value="Teste GET">
+        <input type="hidden" name="idade" value="18">
+        <input type="hidden" name="profissao" value="Estudante">
+        <input type="hidden" name="salario" value="1500">
+        <input type="hidden" name="experiencia" value="Teste de envio usando GET">
+
+        <button type="submit">Enviar com GET (teste)</button>
+
+    </form>
+
+</body>
+</html>
