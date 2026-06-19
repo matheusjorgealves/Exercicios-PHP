@@ -1,0 +1,27 @@
+/* Configurações para a segunda tela */
+
+h1 {
+    width: 100%;
+    background-color: rgb(255, 255, 0);
+    text-align: center;
+
+}
+
+p {
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.blue {
+    width: 20%;
+    padding: 10px;
+    background-color: rgb(0, 0, 94);
+    color: white;
+}
+
+.pink {
+    width: 20%;
+    padding: 10px;
+    background-color: pink;
+    color: black;
+}

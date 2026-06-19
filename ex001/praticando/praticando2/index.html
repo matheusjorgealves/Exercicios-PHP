@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quem é você?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1> Quem é você? </h1>
+    </header>
+
+    <main>
+
+        <form action="processador.php" method="post"> 
+            <!-- Form post -->
+
+            <!-- Vai perguntar o sexo e dar duas opções -->
+            <label for="sexo">Sexo:</label>
+
+            <div>
+                <!-- Masculino -->
+                <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                <label for="masculino">Masculino</label> <br>
+
+                <!-- Feminino -->
+                <input type="radio" id="feminino" name="sexo" value="feminino" required>
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <!-- Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <!-- Idade -->
+            <label for="idade">Idade:</label>
+            <input type="number" name="idade" id="idade" required>
+
+            <!-- Nacionalidade -->
+            <label for="nacionalidade">Nacionalidade:</label>
+            <input type="text" name="nacionalidade" id="nacionalidade">
+
+            <!-- Profissão -->
+            <label for="profissao">Profissão:</label>
+            <input type="text" name="profissao" id="profissao">
+
+            <!-- Botão -->
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Site feito por <a href="https://github.com/matheusjorgealves" target="_blank">Matheus Jorge</a></p>
+    </footer>
+</body>
+</html>
