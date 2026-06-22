@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    background-color: white;
+}
+
+p {
+    font-size: 1.3em;
+    text-align: left;
+    padding: 10px;
+}

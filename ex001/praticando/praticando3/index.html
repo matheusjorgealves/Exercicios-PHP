@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+
+    <main>
+        <form action="processador.php" method="get">
+            <!-- Tipos de cálculo -->
+            <label for="tipoCalc">Tipo de Cálculo:</label>
+                <div>
+                    <!-- Soma -->
+                    <input type="radio" name="tipoCalc" id="adicao" value="adicao" required>
+                    <label for="adicao">Adição</label>
+
+                    <!-- Subtração -->
+                    <input type="radio" name="tipoCalc" id="subtracao" value="subtracao">
+                    <label for="subtracao">Subtração</label>
+
+                    <!-- Multiplicação -->
+                    <input type="radio" name="tipoCalc" id="multiplicacao" value="multiplicacao">
+                    <label for="multiplicacao">Multiplicação</label>
+
+                    <!-- Divisão -->
+                    <input type="radio" name="tipoCalc" id="divisao" value="divisao">
+                    <label for="divisao">Divisão</label>
+                </div>
+
+                <br>
+
+            <!-- Entrada do 1° número -->
+            <label for="n1">1° número:</label>
+            <input type="number" name="n1" id="n1" required> <br> <br>
+            
+            <!-- Entrada do 2° número -->
+            <label for="n2">2° número:</label>
+            <input type="number" name="n2" id="n2" required> <br> <br>
+
+            <!-- Envio do form -->
+            <button type="submit">Calcular</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Site feito por <a href="https://github.com/matheusjorgealves">Matheus Jorge</a></p>
+    </footer>
+
+</body>
+</html>
