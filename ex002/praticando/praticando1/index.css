@@ -1,0 +1,120 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(158, 231, 158);
+}
+
+header {
+    width: 100vw;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(21, 53, 21);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.1em;
+}
+
+main {
+    width: 50vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+form h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+form input {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+div#pagamento {
+    margin-top: 5px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+input.pagamento:checked {
+    accent-color: rgb(21, 53, 21);
+}
+
+div#button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 10px;
+}
+button {
+    width: 80%;
+    padding: 7px;
+
+    background-color: rgb(158, 231, 158);
+    color: black;
+    font-size: 1.0em;
+    font-weight: bold;
+    border-color: rgb(21, 53, 21);
+}
+button:hover {
+    cursor: pointer;
+    background-color: rgb(21, 53, 21);
+    color: rgb(158, 231, 158);
+}
+
+footer {
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+    padding: 5px;
+    background-color: rgb(21, 53, 21);
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(158, 231, 158);
+    cursor: pointer;
+}
+footer a:hover {
+    color: rgb(3, 230, 3);
+}
