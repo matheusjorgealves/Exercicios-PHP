@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(238, 53, 53);
+}
+
+h1 {
+    padding: 10px;
+    background-color: white;
+}
+
+h2 {
+    padding: 10px;
+    background-color: white;
+    font-size: 1.6em;
+}
+
+p {
+    font-size: 1.2em;
+    color: white;
+}

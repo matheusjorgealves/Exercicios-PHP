@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar da Léo</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Bem vind* ao Bar da Léo</h1>
+
+        <!-- Armazena as âncoras -->
+        <nav>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">X</a>
+        </nav>
+    </header>
+
+    <!-- Corpo do site -->
+    <main>
+        <form action="processador.php" method="get">
+
+            <!-- Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <!-- Bebida -->
+            <label for="bebida">Selecione a bebida:</label>
+            <select name="bebida" id="bebida" required>
+                <option value="refrigerante">Refrigerante</option>
+                <option value="cerveja">Cerveja</option>
+                <option value="destilados">Destilados</option>
+                <option value="batidas">Batidas</option>
+                <option value="agua">Água</option>
+            </select>
+
+            <!-- Quantidade -->
+            <label for="quantidade">Quantidade:</label>
+            <select name="quantidade" id="quantidade">
+                <option value="dose">Dose</option>
+                <option value="lata">Lata</option>
+                <option value="litro">Litro</option>
+            </select>
+
+            <!-- Pagamento -->
+            <label for="pagamento">Forma de pagamento:</label>
+            <select name="pagamento" id="pagamento">
+                <option value="pix">Pix</option>
+                <option value="credito">Crédito</option>
+                <option value="debito">Débito</option>
+            </select>
+
+            <!-- Comprar -->
+             <button type="submit">Efetuar compra</button>
+        </form>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Site feito por <a href="https://github.com/matheusjorgealves" target="_blank" id="github">Matheus Jorge</a></p>
+    </footer>
+</body>
+</html>

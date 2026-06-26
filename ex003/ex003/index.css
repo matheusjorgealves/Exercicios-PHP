@@ -1,0 +1,104 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(238, 53, 53);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100vw;
+    padding: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    background-color: rgb(45, 238, 180);
+}
+
+h1 {
+    font-size: 2.6em;
+    color: white;
+    text-shadow: 3px 2px 2px rgb(0, 59, 5);
+}
+
+nav {
+    margin-top: 15px;
+}
+
+a {
+    background-color: rgb(238, 53, 53);
+    color: white;
+    padding: 7px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: white;
+    color: rgb(238, 53, 53);
+    transition: 0.5s;
+}
+
+main {
+    width: 70%;
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+form {
+    display: grid;
+
+    grid-template-columns: 150px 1fr;
+
+    row-gap: 15px;
+    column-gap: 10px;
+
+    align-items: center;
+}
+
+input {
+    padding: 2px;
+}
+
+button {
+    grid-column: span 2;
+
+    padding: 4px;
+    background-color: rgb(238, 53, 53);
+    color: white;
+    border: 1px solid white;
+    font-size: 1em;
+}
+button:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+a#github {
+    padding: 0px;
+    background-color: white;
+    color: rgb(238, 53, 53);
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+a#github:hover {
+    color: rgb(45, 238, 180);
+    text-shadow: black;
+}

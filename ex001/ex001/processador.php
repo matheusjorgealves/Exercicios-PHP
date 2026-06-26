@@ -1,4 +1,4 @@
-<?php // assim que inicia-se um código PHP
+<?php // assim que se inicia um código PHP
 
 $metodo = $_SERVER["REQUEST_METHOD"]; 
     // indentificando o método de envio

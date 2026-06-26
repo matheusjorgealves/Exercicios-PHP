@@ -13,7 +13,6 @@
     if ($formaPagamento == "cartaoCredito") {
         // sem desconto
 
-        $desconto = 0;
         $valorFinal = $valorCompra - $desconto;
         $mensagem = "Olá $nome, sua compra de R$$valorCompra foi realizada com cartão de crédito. Não há desconto. Valor a pagar: R$$valorFinal";
 
