@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Boletim Escolar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Boletim Escolar</h1>
+    </header>
+
+    <main>
+
+        <form action="processador.php" method="post">
+
+            <!-- Nome -->
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required>
+
+            <!-- Nota 1 -->
+            <label for="nota1">Nota do 1° Bimestre:</label>
+            <input type="number" name="nota1" id="nota1" min="0" max="10" step="1" required>
+
+            <!-- Nota 2 -->
+            <label for="nota2">Nota do 2° Bimestre:</label>
+            <input type="number" name="nota2" id="nota2" min="0" max="10" step="1" required>
+
+            <!-- Nota 3 -->
+            <label for="nota3">Nota do 3° Bimestre:</label>
+            <input type="number" name="nota3" id="nota3" min="0" max="10" step="1" required>
+
+            <!-- Nota 4 -->
+            <label for="nota4">Nota do 4° Bimestre:</label>
+            <input type="number" name="nota4" id="nota4" min="0" max="10" step="1" required>
+
+            <!-- Frequência -->
+            <label for="frequencia">Frequência:</label>
+            <input type="number" name="frequencia" id="frequencia" min="0" max="100" step="1" required>
+
+            <!-- Disciplina -->
+            <label for="disciplina">Disciplina:</label>
+
+            <select name="disciplina" id="disciplina" required>
+                <option value="matematica">Matemática</option>
+                <option value="portugues">Português</option>
+                <option value="historia">História</option>
+                <option value="geografia">Geografia</option>
+                <option value="ingles">Inglês</option>
+            </select>
+
+            <!-- Calcular -->
+            <button type="submit">Calcular</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Site feito por <a href="https://github.com/matheusjorgealves" target="_blank">Matheus Jorge</a></p>
+    </footer>
+</body>
+</html>

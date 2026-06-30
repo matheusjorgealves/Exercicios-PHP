@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(49, 49, 49);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(236, 71, 21);
+}
+
+h1 {
+    font-size: 2.1em;
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.61);
+}
+
+main {
+    width: 70%;
+
+    background-color: white;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+form {
+    display: grid;
+
+    grid-template-columns: 1fr 150px;
+
+    row-gap: 15px;
+    column-gap: 10px;
+
+    align-items: center;
+}
+
+input {
+    padding: 2px;
+}
+
+select option:checked {
+    background-color: orangered;
+}
+
+button {
+    background-color: orange;
+    border: 0.1px solid rgb(0, 0, 0);
+    padding: 1px;
+    font-size: 1.1em;
+}
+button:hover {
+    transition-duration: .6s;
+    cursor: pointer;
+    background-color: rgb(231, 150, 0);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+    background-color: white;
+    padding: 2px 0px;
+}
+
+/* Configurações CSS do PHP */
+
+body#php {
+    background-color: rgb(236, 71, 21);
+}
+
+header#php {
+    background-color: rgb(49, 49, 49);
+}
+
+main#php {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h2#green {
+    color: green;
+}
+
+h2#yellow {
+    color: rgb(255, 238, 0);
+    text-shadow: 2px 2px 2px rgb(53, 53, 0);
+}
+
+h2#red {
+    color: red;
+}
+
+p {
+    margin: 5px 0px;
+}
+
+form#php {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button#php {
+    padding: 6px;
+    background-color: rgb(255, 213, 136);
+}
+button#php:hover {
+    background-color: rgb(255, 174, 24);
+}
