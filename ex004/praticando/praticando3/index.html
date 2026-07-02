@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Cadastro</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Ficha de cadastro</h1>
+    </header>
+
+    <main>
+        <form action="processador.php" method="post">
+            <!-- Nome -->
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome" required> <br> <br>
+
+            <!-- Idade -->
+            <label for="idade">Idade: </label>
+            <input type="number" name="idade" id="idade" required min="0" max="140" step="1"> <br> <br>
+
+            <!-- Cidade -->
+            <label for="cidade">Cidade: </label>
+            <input type="text" name="cidade" id="cidade" required> <br> <br>
+
+            <!-- Time -->
+            <label for="time">Time do coração:</label>
+
+            <select name="time" id="time" required>
+                <option value="saopaulo">São Paulo</option>
+                <option value="santos">Santos</option>
+                <option value="palmeiras">Palmeiras</option>
+                <option value="corinthians">Corinthians</option>
+                <option value="gremio">Grêmio</option>
+                <option value="flamengo">Flamengo</option>
+                <option value="cruzeiro">Cruzeiro</option>
+                <option value="bahia">Bahia</option>
+            </select> <br> <br>
+
+            <!-- Escolaridade -->
+            <p>Escolaridade:</p>
+
+            <label for="ensinosuperior">Ensino superior:</label>
+            <input type="radio" name="escolaridade" id="ensinosuperior" value="superior" required> <br>
+
+            <label for="ensinomedio">Ensino médio:</label>
+            <input type="radio" name="escolaridade" id="ensinomedio" value="medio"> <br>
+
+            <label for="ensinoincompleto">Ensino incompleto:</label>
+            <input type="radio" name="escolaridade" id="ensinoincompleto" value="incompleto"> <br> <br>
+
+            <!-- Novidades -->
+            <p>Receber novidades?:</p>
+
+            <label for="futebol">Futebol</label>
+            <input type="checkbox" name="novidades" id="futebol" value="futebol">
+
+            <label for="copa">Copa do Mundo</label>
+            <input type="checkbox" name="novidades" id="copa" value="copa">
+
+            <label for="ufc">UFC</label>
+            <input type="checkbox" name="novidades" id="ufc" value="ufc"> <br> <br>
+
+            <!-- Enviar -->
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
