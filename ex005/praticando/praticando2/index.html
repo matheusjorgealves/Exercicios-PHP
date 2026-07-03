@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrando Produtos</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastrando Produtos - loja de roupas</h1>
+    </header>
+
+    <main>
+        <h2>Preencha o formulário abaixo!</h2>
+
+        <form action="processador.php" method="post">
+            <!-- nome do produto -->
+            <label for="nome">Nome do produto:</label>
+            <input type="text" name="nome" id="nome" required> <br> <br>
+
+            <!-- preço do produto -->
+            <label for="preco">Preço do produto:</label>
+            <input type="number" name="preco" id="preco" min="0" max="10000" step="0.1" required> <br> <br>
+
+            <!-- categoria do produto -->
+            <label for="categoria">Categoria do produto:</label>
+
+            <select name="categoria" id="categoria" required>
+                <option value="blusa">Blusa</option>
+                <option value="camisa">Camisa</option>
+                <option value="calca">Calça</option>
+                <option value="tenis">Tênis</option>
+                <option value="bolsa">Bolsa</option>
+            </select> <br> <br>
+
+            <!-- cadastrar -->
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+mark {
+    padding: 5px;
+}
+
+mark.verde {
+    background-color: green;
+    color: white;
+}
+
+mark.amarelo {
+    background-color: yellow;
+}
+
+mark.laranja {
+    background-color: orange;
+}
+
+mark.vermelho {
+    background-color: red;
+    color: white;
+}
+
+mark.vermelhoescuro {
+    background-color: rgb(133, 0, 0);
+    color: white;
+}
