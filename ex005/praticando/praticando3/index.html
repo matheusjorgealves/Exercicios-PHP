@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho escolar</title>
+</head>
+<body>
+    <header>
+        <h1>Consulta de desempenho escolar</h1>
+    </header>
+
+    <main>
+        <form action="processador.php" method="post">
+            <!-- nome -->
+            <label for="nome">Nome do aluno(a):</label>
+            <input type="text" name="nome" id="nome" required> <br> <br>
+
+            <!-- comportamento -->
+            <label for="comportamento">Comportamento do aluno(a):</label>
+            
+            <select name="comportamento" id="comportamento" required>
+                <option value="ruim">Ruim</option>
+                <option value="regular">Regular</option>
+                <option value="bom">Bom</option>
+                <option value="excelente">Excelente</option>
+            </select> <br> <br>
+
+            <!-- nota 1 -->
+            <label for="n1">Nota do 1° Bimestre:</label>
+            <input type="number" name="n1" id="n1" min="0" max="10" step="0.5" required> <br> <br>
+
+            <!-- nota 2 -->
+            <label for="n2">Nota do 2° Bimestre:</label>
+            <input type="number" name="n2" id="n2" min="0" max="10" step="0.5" required> <br> <br>
+
+            <!-- nota 3 -->
+            <label for="n3">Nota do 3° Bimestre:</label>
+            <input type="number" name="n3" id="n3" min="0" max="10" step="0.5" required> <br> <br>
+
+            <!-- nota 4 -->
+            <label for="n4">Nota do 4° Bimestre:</label>
+            <input type="number" name="n4" id="n4" min="0" max="10" step="0.5" required> <br> <br>
+
+            <!-- consultar -->
+            <button type="submit">Consultar</button>
+        </form>
+    </main>
+</body>
+</html>

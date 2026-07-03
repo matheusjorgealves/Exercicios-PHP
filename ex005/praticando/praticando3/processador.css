@@ -1,0 +1,24 @@
+mark {
+    padding: 5px;
+    margin: 10px;
+    font-weight: bolder;
+}
+
+mark.minimo {
+    background-color: rgb(187, 0, 0);
+    color: white;
+}
+
+mark.reprovado {
+    background-color: red;
+    color: white;
+}
+
+mark.aprovado {
+    background-color: rgb(13, 97, 13);
+    color: white;
+}
+
+mark.maximo {
+    background-color: rgb(216, 231, 7);
+}
