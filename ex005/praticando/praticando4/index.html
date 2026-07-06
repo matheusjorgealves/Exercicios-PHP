@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <h1>Biblioteca</h1>
+
+    <form action="processador.php" method="post">
+
+        <!-- consultar -->
+        <label for="consultar">Qual livro você quer consultar?:</label>
+        
+        <select name="consultar" id="consultar" required>
+            <option value="0">Dom Casmurro</option>
+            <option value="1">O Pequeno Príncipe</option>
+            <option value="2">Percy Jackson</option>
+            <option value="3">Harry Potter</option>
+            <option value="4">Turma da Mônica</option>
+        </select> <br> <br>
+
+        <!-- alterar -->
+        <label for="alterar">Qual livro você deseja alterar?</label>
+        
+        <select name="alterar" id="alterar" required>
+            <option value="0">Dom Casmurro</option>
+            <option value="1">O Pequeno Príncipe</option>
+            <option value="2">Percy Jackson</option>
+            <option value="3">Harry Potter</option>
+            <option value="4">Turma da Mônica</option>
+        </select> <br> <br>
+
+        <!-- alterarNome -->
+        <label for="alterarNome">Novo nome do livro que você deseja alterar:</label>
+        <input type="text" name="alterarNome" id="alterarNome" required> <br> <br>
+
+        <!-- adicionar -->
+        <label for="adicionar">Adicionar novo livro ao catálogo:</label>
+        <input type="text" name="adicionar" id="adicionar" required> <br> <br>
+
+        <!-- enviar -->
+        <button type="submit">ENVIAR</button>
+
+    </form>
+</body>
+</html>
