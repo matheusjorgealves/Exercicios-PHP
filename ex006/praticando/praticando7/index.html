@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locadora do Vini</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Locadora do Vini</h1>
+
+        <!-- Container dos links -->
+        <nav>
+            <a href="#">Instagram</a>
+            <a href="#">Tik Tok</a>
+            <a href="#">Facebook</a>
+        </nav>
+    </header>
+
+    <!-- Corpo do site -->
+    <main>
+        <h2>Cadastre mais um filme:</h2>
+
+        <!-- Formulário POST -->
+        <form action="processador.php" method="post">
+            <!-- titulo -->
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" id="titulo" required>
+            <br> <br>
+
+            <!-- genero -->
+            <label for="genero">Gênero:</label>
+            <select name="genero" id="genero" required>
+                <option value="romance">Romance</option>
+                <option value="acao">Ação</option>
+                <option value="suspense">Suspense</option>
+                <option value="comedia">Comédia</option>
+                <option value="drama">Drama</option>
+                <option value="terror">Terror</option>
+            </select>
+            <br> <br>
+
+            <!-- lancamento -->
+            <label for="lancamento">Ano de lançamento:</label>
+            <input type="date" name="lancamento" id="lancamento" required>
+            <br> <br>
+
+            <!-- preco -->
+            <label for="preco">Preço: R$</label>
+            <input type="number" name="preco" id="preco" min="10" max="200" step="0.1" required>
+            <br> <br>
+
+            <!-- quantidade -->
+            <label for="quantidade">Quantidade disponível:</label>
+            <input type="number" name="quantidade" id="quantidade" min="0" max="100" step="1" required>
+            <br> <br>
+
+            <!-- cadastrar -->
+            <button type="submit">CADASTRAR</button>
+            <br> <br>
+        </form>
+    </main>
+</body>
+</html>
