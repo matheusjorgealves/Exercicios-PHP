@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica do Tô</title>
+</head>
+<body>
+    <header>
+        <h1>Gráfica do Tô</h1>
+    </header>
+
+    <main>
+        <h2>Impressão de etiquetas</h2>
+
+        <form action="processador.php" method="post">
+            <!-- encomenda -->
+            <label for="etiquetas">Quantas etiquetas imprimir?:</label>
+            <input type="number" name="etiquetas" id="etiquetas" min="0" required>
+            <br> <br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
