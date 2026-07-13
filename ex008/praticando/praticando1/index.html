@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taboada</title>
+</head>
+<body>
+    <h1>Taboada</h1>
+
+    <form action="processador.php" method="get">
+        <!-- taboada -->
+        <label for="taboada">Taboada de qual número?:</label>
+        <input type="number" name="taboada" id="taboada" placeholder="positivo ou negativo" required>
+        <br> <br>
+
+        <!-- maximo -->
+        <label for="maximo">Máximo:</label>
+        <input type="number" name="maximo" id="maximo" min="5" placeholder="mínimo 5" required>
+        <br> <br>
+
+        <button type="submit">CALCULAR</button>
+        <br> <br>
+    </form>
+</body>
+</html>
