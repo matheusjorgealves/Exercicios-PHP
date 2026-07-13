@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemark</title>
+</head>
+<body>
+    <header>
+        <h1>Cinemark</h1>
+    </header>
+
+    <main>
+        <h2>Sala do cinema:</h2>
+
+        <form action="processador.php" method="post">
+            <!-- fileiras -->
+            <label for="fileiras">Fileiras:</label>
+            <input type="number" name="fileiras" id="fileiras" min="1" max="20" required>
+            <br> <br>
+
+            <!-- colunas -->
+            <label for="colunas">Colunas:</label>
+            <input type="number" name="colunas" id="colunas" min="1" required>
+            <br> <br>
+
+            <button type="submit">CRIAR</button>
+            <br> <br>
+        </form>
+    </main>
+</body>
+</html>
