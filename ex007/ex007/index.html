@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padaria do Jõao</title>
+</head>
+<body>
+    <h1>Padaria do João</h1>
+
+    <h2>Sistema de gerar senhas</h2>
+
+    <form action="processador.php" method="get">
+        <!-- inicio da senha -->
+        <label for="inicio">Valor da 1° senha:</label>
+        <input type="number" name="inicio" id="inicio" min="0" required> 
+        <br> <br>
+
+        <!-- incremento da senha -->
+        <label for="passo">valor do passo da senha:</label>
+        <input type="number" name="passo" id="passo" min="1" required>
+        <br> <br>
+
+        <!-- fim da senha -->
+        <label for="fim">Valor da última senha:</label>
+        <input type="number" name="fim" id="fim" min="10" required>
+        <br> <br>
+
+        <button type="submit">GERAR SENHAS</button>
+        <br> <br>
+    </form>
+</body>
+</html>
