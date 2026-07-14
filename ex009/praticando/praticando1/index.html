@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de produtos</title>
+</head>
+<body>
+    <header>
+        <h1>Cadastro de produtos</h1>
+    </header>
+
+    <main>
+        <h2>Cadastre um produto abaixo:</h2>
+
+        <form action="processador.php" method="post">
+            <!-- nome -->
+            <label for="nome">Nome do produto:</label>
+            <input type="text" name="nome" id="nome" required>
+            <br> <br>
+
+            <!-- categoria -->
+            <label for="categoria">Categoria do produto:</label>
+            <select name="categoria" id="categoria">
+                <option value="gamer">Gamer</option>
+                <option value="roupa">Roupa</option>
+                <option value="alimento">Alimento</option>
+                <option value="brinquedo">Brinquedo</option>
+            </select>
+            <br> <br>
+
+            <!-- preco -->
+            <label for="preco">Preço do produto: R$</label>
+            <input type="number" name="preco" id="preco" min="1" step="0.1" required>
+            <br> <br>
+
+            <!-- quantidade -->
+            <label for="quantidade">Quantidade em estoque:</label>
+            <input type="number" name="quantidade" id="quantidade" min="0" max="200" step="1" required>
+            <br> <br>
+
+            <button type="submit">CADASTRAR</button>
+            <br> <br>
+        </form>
+    </main>
+</body>
+</html>
