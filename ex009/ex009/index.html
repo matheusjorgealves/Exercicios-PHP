@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de doces</title>
+</head>
+<body>
+    <header>
+        <h1>Loja de doces</h1>
+    </header>
+
+    <main>
+        <h2>Cadastre:</h2>
+
+        <form action="processador.php" method="post">
+            <!-- promocao -->
+            <label for="promocao">Promoção:</label>
+            <input type="text" name="promocao" id="promocao" required>
+            <br> <br>
+
+            <!-- nome -->
+            <label for="nome">Nome do novo produto:</label>
+            <input type="text" name="nome" id="nome" required> 
+            <br> <br>
+
+            <button type="submit">CADASTRAR</button>
+            <br> <br>
+        </form>
+    </main>
+</body>
+</html>
