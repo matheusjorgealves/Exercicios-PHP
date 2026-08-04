@@ -1,6 +1,7 @@
 <?php
 
-    // mysqli_query executa comandos sql, eu passo dois duas variáveis como parâmetro, a primeira é a conexão e a segunda é o comando sql
+    // mysqli_query executa comandos sql, eu passo duas variáveis como parâmetro, a primeira é a conexão e a segunda é o comando sql
+    // mysqli_error mostra a última mensagem do mysql, então se houver algum erro ele guarda esse erro e eu posso mostra-lo
 
     include("conexao.php");
 
@@ -45,15 +46,15 @@
         if (empty($erros)) {
             // cria a variável sql
             $sql = "INSERT INTO produtos (nome, categoria, preco, quantidade) VALUES ('$nome', '$categoria', $preco, $quantidade);";
-
+            
             // CRIA REGISTROS NA TABELA e armazena resposta do resultado
             $resultadoQuery = mysqli_query($conexao, $sql);
 
             // validando a criação do registro
-            if ($resultadoQuery == "true") {
+            if ($resultadoQuery === true) {
                 $mensagemQuery = "Produto cadastrado com sucesso!";
             } else {
-                $mensagemQuery = "Erro ao cadastrar produto!";
+                $erros[] = mysqli_error($conexao);
             };
         };
     };
