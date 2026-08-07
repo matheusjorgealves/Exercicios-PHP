@@ -47,7 +47,7 @@
             // cria a variável sql
             $sql = "INSERT INTO produtos (nome, categoria, preco, quantidade) VALUES ('$nome', '$categoria', $preco, $quantidade);";
             
-            // CRIA REGISTROS NA TABELA e armazena resposta do resultado
+            // envia a instrução SQL para o banco e armazena o resultado retornado
             $resultadoQuery = mysqli_query($conexao, $sql);
 
             // validando a criação do registro
