@@ -117,6 +117,9 @@
             <input type="number" name="quantidade" id="quantidade" min="0" required value="<?= $resultadoQuery == true ? "" : $quantidade ?>">
             <br> <br>
 
+            <!-- botões -->
+            <button type="button"><a href="index.php">Voltar</a></button>
+
             <button type="submit">Cadastrar</button>
             <br> <br>
         </form>
