@@ -133,6 +133,8 @@
             <br> <br>
 
             <!-- botão -->
+            <button type="button"><a href="index.php">Voltar</a></button>
+
             <button type="submit">Atualizar</button>
         </form>
     </main>
