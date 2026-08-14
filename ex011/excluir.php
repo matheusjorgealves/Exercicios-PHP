@@ -26,7 +26,7 @@
 
     // validando id do banco de dados
     if (!isset($produto["id"])) {
-        echo "Erro de id!";
+        echo "Produto não encontrado";
         die;
     };
 
@@ -34,16 +34,22 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // se o usuário clicar no botão excluir
         if (isset($_POST["buttonExcluir"])) {
-            // variável com comando sql para DELETE
-            $sql = "DELETE FROM produtos WHERE id = $id";
+            // variável com comando sql para DELETE. ? siginifica que receberá algo posteriormente
+            $sql = "DELETE FROM produtos WHERE id = ?";
 
-            // executando comando DELETE
-            $resultadoDelete = mysqli_query($conexao, $sql);
+            // prepara o comando da variável sql para ser executada posteriormente atrevés da $conexao
+            $stmt = mysqli_prepare($conexao, $sql);
+
+            // esse comando associa $id ao parâmetro ? do $stmt. O "i" informa que $id é um inteiro
+            mysqli_stmt_bind_param($stmt, "i", $id);
+
+            // mysqli_stmt_execute executa o $stmt, executa o DELETE
+            $resultadoDelete = mysqli_stmt_execute($stmt);
 
             // validando resultado do comando DELETE
             if ($resultadoDelete === false) {
-                $erro = mysqli_error($resultadoDelete);
-                echo $erro;
+                $erro = mysqli_error($conexao);
+                echo "Não foi possível excluir o produto. Tente novamente.";
             } else { // se o DELETE funcionar volta para página inicial
                 header("Location: index.php");
             };
