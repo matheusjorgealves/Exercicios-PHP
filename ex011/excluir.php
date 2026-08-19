@@ -12,15 +12,25 @@
     };
 
     // variável com comando sql para SELECT
-    $sql = "SELECT * FROM produtos WHERE id = $id";
+    $sql = "SELECT * FROM produtos WHERE id = ?";
 
-    // executando o comando sql e armazenando o resultado
-    $resultadoSelect = mysqli_query($conexao, $sql);
+    // preparando o comando sql para receber um dado no ?
+    $stmt = mysqli_prepare($conexao, $sql);
+
+    // significado = $stmt recebe $id como dado no lugar de ?, $id é um dado do tipo "i" (integer, ou seja, inteiro)
+    mysqli_stmt_bind_param($stmt, "i", $id);
+
+    // executando o statement, ele retorna true ou false
+    $resultadoStmt = mysqli_stmt_execute($stmt);
 
     // validando o resultado do comando SELECT
-    if ($resultadoSelect === false) {
+    if ($resultadoStmt === false) {
         $erro = mysqli_error($conexao);
     } else {
+        // buscando o resultado da consulta sql feita com statements e armazenando o resultado
+        $resultadoSelect = mysqli_stmt_get_result($stmt);
+
+        // transforma o resultado em um array associativo
         $produto = mysqli_fetch_assoc($resultadoSelect);
     };
 
@@ -34,10 +44,10 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // se o usuário clicar no botão excluir
         if (isset($_POST["buttonExcluir"])) {
-            // variável com comando sql para DELETE. ? siginifica que receberá algo posteriormente
+            // variável com comando sql para DELETE. ? é um placeholder, significa que ? receberá um dado posteriormente
             $sql = "DELETE FROM produtos WHERE id = ?";
 
-            // prepara o comando da variável sql para ser executada posteriormente atrevés da $conexao
+            // prepara o comando da variável sql para ser executada posteriormente, recebendo dados no lugar do ?
             $stmt = mysqli_prepare($conexao, $sql);
 
             // esse comando associa $id ao parâmetro ? do $stmt. O "i" informa que $id é um inteiro
