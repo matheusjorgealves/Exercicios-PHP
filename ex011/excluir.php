@@ -17,6 +17,11 @@
     // preparando o comando sql para receber um dado no ?
     $stmt = mysqli_prepare($conexao, $sql);
 
+    // validando o mysqli_prepare
+    if (!$stmt) {
+        die;
+    };
+
     // significado = $stmt recebe $id como dado no lugar de ?, $id é um dado do tipo "i" (integer, ou seja, inteiro)
     mysqli_stmt_bind_param($stmt, "i", $id);
 
@@ -62,6 +67,7 @@
                 echo "Não foi possível excluir o produto. Tente novamente.";
             } else { // se o DELETE funcionar volta para página inicial
                 header("Location: index.php");
+                die;
             };
         };
     };
