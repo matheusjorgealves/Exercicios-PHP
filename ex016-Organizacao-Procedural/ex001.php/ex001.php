@@ -43,26 +43,31 @@
         if (empty($erros)) {
             // USUÁRIO QUER CALCULAR O DESCONTO
             if (isset($_POST["desconto"])) {
-                $desconto = $_POST["desconto"];
+                // se o desconto não for um valor numérico
+                if (filter_var($_POST["desconto"], FILTER_VALIDATE_FLOAT) === false) {
+                    $erros[] = "O desconto precisa ser um valor numérico!";
+                } else {
+                    $desconto = $_POST["desconto"];
 
-                // validando o desconto
-                if ($desconto < 0) {
-                    $erros[] = "O desconto não pode ser negativo!";
-                } elseif ($desconto >= 100) {
-                    $erros[] = "O desconto não pode ser superior a 100%!";
-                }
+                    // validando o desconto
+                    if ($desconto < 0) {
+                        $erros[] = "O desconto não pode ser negativo!";
+                    } elseif ($desconto > 100) {
+                        $erros[] = "O desconto não pode ser superior a 100%!";
+                    }
 
-                // chamando a função para verficar o desconto em relação ao preco
-                $descontoVerificado = verificarDesconto($preco, $desconto);
+                    // chamando a função para verficar o desconto em relação ao preco
+                    $descontoVerificado = verificarDesconto($preco, $desconto);
 
-                // chamando a função para verificar o desconto em relação ao preco
-                if ($descontoVerificado === false) {
-                    $erros[] = "O desconto não pode ser acima de 80% do preço do livro!";
-                }
+                    // chamando a função para verificar o desconto em relação ao preco
+                    if ($descontoVerificado === false) {
+                        $erros[] = "O desconto não pode ser acima de 80% do preço do livro!";
+                    }
 
-                // se não houverem erros 
-                if (empty($erros)) {
-                    $mensagem = "O preço do livro com o desconto de R$$desconto aplicado é R$descontoVerificado!";
+                    // se não houverem erros 
+                    if (empty($erros)) {
+                        $mensagem = "O preço do livro com o desconto de R$$desconto aplicado é R$descontoVerificado!";
+                    }
                 }
             }
             // USUÁRIO QUER CALCULAR O VALOR DA COMPRA
@@ -130,12 +135,12 @@
         <form action="" method="post">
             <!-- preco -->
             <label for="preco">Preço da unidade: R$</label>
-            <input type="number" name="preco" id="preco" min="0" step="0.1" required>
+            <input type="number" name="preco" id="preco" min="0" step="0.01" required>
             <br> <br>
 
             <!-- desconto -->
             <label for="desconto">Desconto:</label>
-            <input type="number" name="desconto" id="desconto" min="0" step="0.1" required>
+            <input type="number" name="desconto" id="desconto" min="0" step="0.01" required>
             <br> <br>
 
             <!-- button calcular -->
@@ -147,7 +152,7 @@
         <form action="" method="post">
             <!-- preco -->
             <label for="preco">Preço da unidade: R$</label>
-            <input type="number" name="preco" id="preco" min="0" step="0.1" required>
+            <input type="number" name="preco" id="preco" min="0" step="0.01" required>
             <br> <br>
 
             <!-- quantidade -->
